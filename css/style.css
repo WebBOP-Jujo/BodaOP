@@ -1,0 +1,293 @@
+/* Estilos Generales */
+body {
+    font-family: 'Garamond', 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #5a4a42;
+    line-height: 1.65; /* Ligeramente más compacto */
+    background-color: #fdfaf6;
+    overflow-x: hidden; /* Prevenir scroll horizontal accidental */
+}
+
+.container {
+    max-width: 850px; /* Un poco más estrecho */
+    margin: 0 auto;
+    padding: 0 15px; /* Padding lateral para móviles */
+}
+
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+    color: #8B4513;
+    text-align: center;
+    margin-bottom: 0.6em; /* Menos margen inferior */
+    font-weight: normal;
+}
+
+h1 { font-size: 3.2em; margin-bottom: 0.1em;} /* Tamaño ligeramente ajustado */
+h2 { font-size: 2.6em; margin-top: 0; }
+h3 { font-size: 2.0em; color: #A0522D; margin-bottom: 0.5em;}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em; /* Espacio estándar entre párrafos */
+    text-align: center;
+}
+
+a {
+    color: #A0522D;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8B4513;
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(139, 69, 19, 0), rgba(139, 69, 19, 0.6), rgba(139, 69, 19, 0));
+    margin: 2em auto; /* Menos margen vertical y centrado */
+    width: 80%; /* Hacerla un poco más corta */
+}
+
+/* Header */
+header {
+    /* **IMPORTANTE**: Cambia 'images/header-bg.jpg' por la ruta a tu imagen real */
+    background: linear-gradient(rgba(60, 40, 30, 0.4), rgba(60, 40, 30, 0.4)), url('../images/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 2.5em 0; /* *** ALTURA REDUCIDA *** */
+    text-align: center;
+    margin-bottom: 0; /* Sin margen inferior, la nav se pega */
+    position: relative;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+ header p {
+     color: #fdfaf6;
+     font-size: 1.15em;
+     margin-top: 0.3em;
+     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+     text-align: center;
+ }
+
+/* Navegación */
+nav {
+     background-color: rgba(253, 250, 246, 0.95); /* Fondo crema casi opaco */
+     backdrop-filter: blur(5px); /* Efecto cristal esmerilado (soporte variable) */
+     -webkit-backdrop-filter: blur(5px);
+     padding: 0.8em 0; /* Ligeramente más compacta */
+     border-bottom: 1px solid #eaddcc;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px; /* Menos espacio entre elementos */
+}
+
+nav a {
+    color: #8B4513;
+    font-weight: bold;
+    font-size: 1.05em; /* Ligeramente más pequeño */
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+nav a:hover {
+    color: #A0522D;
+    background-color: rgba(222, 184, 135, 0.2); /* Burlywood muy suave */
+    text-decoration: none;
+}
+
+/* Contenido Principal y Secciones */
+main.container {
+    padding-top: 2em; /* Espacio después de la nav */
+    padding-bottom: 2em;
+}
+
+section {
+    padding: 2em 0; /* *** ESPACIO REDUCIDO *** */
+    border-bottom: none; /* Quitar borde inferior por defecto, usar <hr> */
+}
+section:last-of-type {
+    padding-bottom: 0; /* Sin padding inferior en la última sección */
+}
+
+/* Sección Evento */
+.evento-detalle {
+    text-align: center;
+    margin-bottom: 1.8em; /* Menos margen */
+}
+.evento-detalle .emoji {
+    font-size: 1.2em;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.evento-detalle h3 .emoji { /* Específico para el h3 si es necesario */
+     font-size: 1em; /* Ajustar tamaño si es necesario */
+}
+
+.mapa-container {
+     overflow: hidden;
+     padding-bottom: 50%; /* Ajustar aspect ratio si es necesario */
+     position: relative;
+     height: 0;
+     margin-top: 1em;
+     border: 1px solid #eaddcc;
+     border-radius: 5px; /* Bordes redondeados */
+}
+.mapa-container iframe {
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     position: absolute;
+}
+
+/* Sección Instagram */
+#instagram-feed {
+    text-align: center;
+}
+#instagram-feed .aviso-api {
+    background-color: #fff8e1;
+    border: 1px solid #ffe57f;
+    padding: 12px; /* Menos padding */
+    margin-top: 1.5em; /* Más margen superior */
+    border-radius: 5px;
+    color: #795548;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+.hashtag {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #fff; /* Texto blanco */
+    background-color: #A0522D; /* Fondo Siena */
+    padding: 8px 18px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 0.5em;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.instagram-photos {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Columnas ligeramente más pequeñas */
+     gap: 8px; /* Menos espacio */
+     margin-top: 1.5em;
+}
+.instagram-photos img {
+     width: 100%;
+     height: 140px; /* Imágenes cuadradas */
+     object-fit: cover;
+     border-radius: 5px;
+     border: 1px solid #eaddcc;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.instagram-photos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Sección Confirmar */
+.lista-confirmacion {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5em;
+}
+.lista-confirmacion li {
+    margin-bottom: 0.5em;
+    text-align: center; /* Asegurar centrado */
+}
+
+/* Emojis genéricos */
+.emoji {
+    display: inline-block; /* Para que no rompa la línea si el navegador lo interpreta mal */
+    margin-right: 6px;
+    /* font-size: 1.1em; */ /* Ajustar tamaño si es necesario */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5em 0; /* *** ALTURA REDUCIDA *** */
+    margin-top: 2em; /* Espacio antes del footer */
+    background-color: #f0e6d8;
+    color: #5a4a42;
+}
+footer p {
+    margin-bottom: 0.3em; /* Menos espacio entre párrafos del footer */
+}
+.nombres-footer {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em; /* Ligeramente más pequeño */
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    color: #8B4513;
+}
+.copy-footer {
+    font-size: 0.85em;
+    color: #7a6a62;
+}
+
+/* Media Query para pantallas pequeñas (ejemplo) */
+@media (max-width: 600px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2.1em; }
+    h3 { font-size: 1.7em; }
+
+    nav li {
+        margin: 0 8px; /* Aún menos espacio en móvil */
+    }
+    nav a {
+        font-size: 0.95em;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+    main.container {
+         padding-top: 1.5em;
+         padding-bottom: 1.5em;
+    }
+    section {
+        padding: 1.5em 0;
+    }
+    hr {
+        margin: 1.5em auto;
+    }
+    .hashtag {
+        font-size: 1.2em;
+        padding: 6px 12px;
+    }
+    .instagram-photos {
+         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+     .instagram-photos img {
+         height: 120px;
+     }
+
+}
